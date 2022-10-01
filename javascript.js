@@ -3,7 +3,6 @@ let container = containers[0];
 let submitBtn = document.getElementById('submit');
 let sizeInput;
 let sizeInputSqrd;
-let randomColor = Math.floor(Math.random()*16777215).toString(16);
 
 
 /*
@@ -25,11 +24,20 @@ for (let i = 0; i < 256; i++) {
     container.appendChild(newDiv);
 }
 
-children = container.getElementsByClassName('children');
-for (let element of children) {
-    element.addEventListener('mouseover', () => element.style.backgroundColor = '#' + randomColor)
+
+function changeBkg(element) {
+    element.addEventListener('mouseenter', () => {
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        element.style.backgroundColor = '#' + randomColor;
+        element.style.opacity += '0.1';
+    })
 }
 
+
+children = container.getElementsByClassName('children');
+for (let element of children) {
+    changeBkg(element)
+}
 
 
 
@@ -76,7 +84,8 @@ function setSize() {
 
     children = container.getElementsByClassName('children');
     for (let element of children) {
-        element.addEventListener('mouseover', () => element.style.backgroundColor = '#' + randomColor)
+        changeBkg(element);
+        element.display
     }
 
 }
