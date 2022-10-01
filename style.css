@@ -18,13 +18,13 @@ html, body {
     position: relative
 ;}
 
-.container > div {
+.children {
     border: 1px solid black;
-    background-color: rgb(211, 4, 4);
+    background-color: white;
 }
 
-.container > div:hover {
-background-color: blue;
+.children:hover {
+    background-color: black;
 }
 
 #grid-size-div {
