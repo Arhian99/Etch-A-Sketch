@@ -20,7 +20,6 @@ function changeBkg(element) {
 }
 
 
-
 function changeOpacity(element) {
     element.addEventListener('mouseenter', () => {
         let currentOpacity = element.style.opacity;
@@ -65,8 +64,3 @@ function setSize() {
         changeOpacity(element);
     }
 }
-
-
-
-
-
