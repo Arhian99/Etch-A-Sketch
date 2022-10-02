@@ -28,20 +28,22 @@ for (let i = 0; i < 256; i++) {
 function changeBkg(element) {
     element.addEventListener('mouseenter', () => {
         let randomColor = Math.floor(Math.random()*16777215).toString(16);
-        element.style.backgroundColor = '#' + randomColor;
-
+        element.style.backgroundColor = '#' + randomColor;        
     })
 }
 
-/*
+
+
 function changeOpacity(element) {
+    element.addEventListener('mouseenter', () => {
         let currentOpacity = element.style.opacity;
         if (element.style.opacity == '') {currentOpacity = 0}
-        else (currentOpacity = parseInt(element.style.opacity, 10));
-        let newOpacity = currentOpacity + 0.1;
-        element.style.opacity = newOpacity; 
-    }
-*/
+        else (currentOpacity = currentOpacity * 1);
+        let newOpacity = currentOpacity + 0.25;
+        element.style.opacity = newOpacity;
+    }) 
+}
+
 /*
 function changeOpacity(element) {
     let currentOpacity = element.getStyle('opacity');
@@ -52,7 +54,7 @@ function changeOpacity(element) {
 children = container.getElementsByClassName('children');
 for (let element of children) {
     changeBkg(element);
-    //changeOpacity(element)
+    changeOpacity(element)
 }
 
 
@@ -101,9 +103,8 @@ function setSize() {
     children = container.getElementsByClassName('children');
     for (let element of children) {
         changeBkg(element);
-        //changeOpacity(element);
+        changeOpacity(element);
     }
-
 }
 
 
