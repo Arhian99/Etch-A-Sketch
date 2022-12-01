@@ -3,4 +3,4 @@
 (No mobile support yet.)
 
 
-LIVE DEMO: https://raw.githack.com/Arhian99/Etch-A-Sketch/main/index.html
+LIVE DEMO: https://arhian99.github.io/Etch-A-Sketch/
